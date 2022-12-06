@@ -1,8 +1,8 @@
-const inputNombreProducto = document.querySelector("#inputNombreProducto"),
-inputPrecioLista = document.querySelector("#inputPrecioLista"),
-inputCostosVariables = document.querySelector("#inputCostosVariables"),
-inputCostosFijos = document.querySelector("#inputCostosFijos"),
-inputMargen = document.querySelector("#inputMargen"),
+let inputNombreProducto = document.querySelector("#inputNombreProducto").value,
+inputPrecioLista = document.querySelector("#inputPrecioLista").value,
+inputCostosVariables = document.querySelector("#inputCostosVariables").value,
+inputCostosFijos = document.querySelector("#inputCostosFijos").value,
+inputMargen = document.querySelector("#inputMargen").value,
 btnCalcular = document.querySelector("#btnCalcular"),
 h4Calculadora = document.querySelector("#h4Calculadora");
 
@@ -27,21 +27,24 @@ function precioProducto(obj){
 };
 
 function HTMLPrecio(obj){
-    h4Calculadora.innerHTML=`El precio de ${obj.nombreProducto} debe ser: $${obj.precio}`;
+    h4Calculadora.innerHTML = `El precio de ${obj.nombreProducto} debe ser: $${obj.precio}`;
 }
 
 function limpiarCampos(){
-    inputNombreProducto.value = "", 
-    inputPrecioLista.value = "", 
-    inputCostosVariables.value = "", 
-    inputCostosFijos.value = "", 
-    inputMargen.value = "";
+    inputNombreProducto = ""; 
+    inputPrecioLista = ""; 
+    inputCostosVariables = ""; 
+    inputCostosFijos = ""; 
+    inputMargen = "";
 };
 
 // LISTENERS
-btnCalcular.addEventListener("click", ()=>{
-    const precioProduct1 = new CalcularPrecio(inputNombreProducto.value, inputPrecioLista.value, inputCostosVariables.value, inputCostosFijos.value, inputMargen.value);
+btnCalcular.addEventListener("click", (e)=>{
+    e.preventDefault();
+
+    const precioProduct1 = new CalcularPrecio(inputNombreProducto, inputPrecioLista, inputCostosVariables, inputCostosFijos, inputMargen);
     precioProduct1.calcularPrecio();
+    console.log(inputNombreProducto, inputPrecioLista, inputCostosVariables, inputCostosFijos, inputMargen)
     HTMLPrecio(precioProduct1);
-    limpiarCampos();
+    // limpiarCampos();
 })
