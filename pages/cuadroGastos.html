@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../imgs/logoSinFondo.png">
+
+    <!-- BOOSTRAP LINKS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+
+    <!-- MY LINKS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Cuadro de Gastos | Sistema de Información Contable</title>
+</head>
+<body>
+
+    <header>
+        <div class="divImg">
+            <a href="./principal.html"><img src="../imgs/logoSinFondo.png" alt="logo"></a>
+        </div>
+
+        <nav class="navbar navbar-expand-lg bg-light m-0 p-0 h-auto navBar">
+            <div class="container-fluid navBar">
+              <div class="divA heightNav">
+                <a class="navbar-brand active" href="./principal.html">CuenCo S.A.</a>
+              </div>
+              <button class="navbar-toggler heightNav" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse heightNav" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./principal.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Cuadro de Gastos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">PROXIMAMENTE</a>
+                  </li>
+                  <!-- <li class="nav-item">
+                    <a class="nav-link" href="#">Ficha de Stock</a>
+                  </li> -->
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <main>
+
+        <div class="d-flex border-bottom">
+          <h1 class="p-3 m-2">Cuadro de Gastos</h1>
+          
+        </div>
+
+        <div class="d-flex">
+            <div class="card m-4" style="width: 18rem;">
+                <img src="../imgs/gastos.png" class="card-img-top" alt="gastos">
+                <div class="card-body">
+                  <p class="card-text">El <b>Cuadro de Gastos</b> nos permite hacer una sumatoria de los gastos que generamos. Además, permite que los separemos en gastos de comercialización y administración.</p>
+                  <p class="card-text">Nos permite, además, crear el <b>Estado de Resultado.</b> </p>
+                </div>
+              </div>
+            <form class="m-4 w-25">
+                <h3>Ingrese su gasto</h3>
+                <div class="mb-3">
+                  <label for="inputGasto" class="form-label">Nombre del gasto</label>
+                  <input type="text" class="form-control" id="inputGasto">
+                  
+                </div>
+                <div class="mb-3">
+                    <label for="tipoDato" class="form-label">Indique el tipo de gasto</label>
+                    <select id="tipoDato" class="form-select">
+                      <option>Comercialización</option>
+                      <option>Administración</option>
+                    </select>
+                  </div>
+                <div class="mb-3">
+                  <label for="inputImporte" class="form-label">Importe en pesos($)</label>
+                  <input type="number" class="form-control" id="inputImporte">
+                </div>
+                <div class="pb-2" id="msgErrorGst">
+
+                </div>
+                <button type="button" class="btn btn-primary" id="btnAgregar">Agregar</button>
+              </form>
+        </div>
+
+        <div class="m-4">
+            <div class="d-flex">
+              <h3 class="m-2">Gastos agregados</h3>
+              <button type="button" class="m-2 btn btn-primary bg-danger text-white border-danger" id="btnTotal">Calcular Total de Gastos</button>
+            </div>
+            <div>
+              <h5 class="m-2" id="h3Gastos">
+
+              </h5>
+            </div>
+            <table class="table p-2">
+                <thead>
+                  <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Importe</th>
+                  </tr>
+                </thead>
+                <tbody id="tableBody">
+                  <!-- <tr>
+                    <th scope="row">Sueldos Administrativos</th>
+                    <td>Comercialización</td>
+                    <td>$78.524</td>
+                  </tr> -->
+                </tbody>
+              </table>
+        </div>
+
+    </main>
+
+    <footer class="d-flex align-content-center justify-content-around align-items-center">
+        <div class="p-2">
+            CuenCo S.A. &copy
+        </div>
+        
+        <div class="p-2">
+            <img class="imgFoot" src="../imgs/logoSinFondo.png" alt="logo">
+        </div>
+
+        <div class="p-2">
+            Junín(B), Argentina
+        </div>
+    </footer>
+
+    <!-- BOOTSTRAP LINKS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+
+    <!-- MY JS LINKS -->
+    <script src="../js/gastos.js"></script>
+
+</body>
+</html>

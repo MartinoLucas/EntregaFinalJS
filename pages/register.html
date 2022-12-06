@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../imgs/logo.jpeg">
+
+    <!-- BOOSTRAP LINKS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+
+    <!-- MY LINKS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Cuadro de Gastos | Sistema de Información Contable</title>
+</head>
+<body>
+
+    <main>
+
+        <div class="d-inline-flex">
+                <!-- Imagen -->
+            <div>
+                <img src="../imgs/bannerCuenCo.png" alt="Cuenco Logo">
+            </div>
+
+            <!-- FORMULARIO SING IN -->
+            <form class="formularioSingIn">
+
+                <div>
+                    <h3>Registra tu cuenta</h3>
+                </div>
+
+                <div class="row mb-3">
+                  <label for="inputUsername" class=" col-form-label">Usuario</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputUsername">
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="inputEmail" class=" col-form-label">Email</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" id="inputEmail">
+                    </div>
+                  </div>
+
+                <div class="row mb-3">
+                  <label for="inputPassword" class=" col-form-label">Contraseña</label>
+                  <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword">
+                  </div>
+                </div>
+
+                <button type="button" class="btn btn-primary" id="btnRegister">Registarme</button>
+
+                <div class="pt-2 msgError" id="msgError">
+
+                </div>
+                <div class="pt-2" id="msgCreado">
+
+                </div>
+
+
+                <div class="pt-2">¿Ya tienes una cuenta? <a href="../index.html">Ingresa aquí.</a></div>
+              </form>
+        </div>
+
+    </main>
+
+    <!-- BOOTSTRAP LINKS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+
+    <!-- MY JS LINKS -->
+    <script src="../js/registro.js"></script>
+
+</body>
+</html>

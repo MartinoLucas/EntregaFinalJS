@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../imgs/logoSinFondo.png">
+
+    <!-- BOOSTRAP LINKS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+
+    <!-- MY LINKS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Cuadro de Gastos | Sistema de Información Contable</title>
+</head>
+<body>
+
+    <header>
+        <div class="divImg">
+            <a href="./principal.html"><img src="../imgs/logoSinFondo.png" alt="logo"></a>
+        </div>
+
+        <nav class="navbar navbar-expand-lg bg-light m-0 p-0 h-auto navBar">
+            <div class="container-fluid navBar">
+              <div class="divA heightNav">
+                <a class="navbar-brand active" href="./principal.html">CuenCo S.A.</a>
+              </div>
+              <button class="navbar-toggler heightNav" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse heightNav" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./principal.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./cuadroGastos.html">Cuadro de Gastos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Calculadora de Precios</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disable" href="#">Ficha de Stock</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <main>
+
+      <div class="m-3 border-bottom">
+        <h1>Calculadora de precios</h1>
+      </div>
+
+      <div>
+        <form class="m-4 w-25">
+          <div class="mb-3">
+            <label for="inputNombreProducto" class="form-label">Nombre del producto</label>
+            <input type="text" class="form-control" id="inputNombreProducto">
+          </div>
+          <div class="mb-3">
+            <label for="inputPrecioLista" class="form-label">Precio de lista</label>
+            <input type="number" class="form-control" id="inputPrecioLista">
+          </div>
+          <div class="mb-3">
+            <label for="inputCostosVariables" class="form-label">Costos variables(xUnidad)</label>
+            <input type="number" class="form-control" id="inputCostosVariables">
+          </div>
+          <div class="mb-3">
+            <label for="inputCostosFIjos" class="form-label">Costos Fijos</label>
+            <input type="number" class="form-control" id="inputCostosFIjos">
+          </div>
+          <div class="mb-3">
+            <label for="inputMargen" class="form-label">Margen de ganancia</label>
+            <input type="number" class="form-control" id="inputMargen" aria-describedby="margenHelp">
+            <div id="margenHelp" class="form-text">El margen debe estar expresado en FLOAT, ej: 1.35.</div>
+          </div>
+          <button type="button" class="btn btn-primary" id="btnCalcular">Calcular</button>
+        </form>
+
+        <div>
+          <h4 id="h4Calculadora">
+            
+          </h4>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="d-flex align-content-center justify-content-around align-items-center">
+      <div class="p-2">
+          CuenCo S.A. &copy
+      </div>
+      
+      <div class="p-2">
+          <img class="imgFoot" src="../imgs/logoSinFondo.png" alt="logo">
+      </div>
+
+      <div class="p-2">
+          Junín(B), Argentina
+      </div>
+  </footer>
+
+    <!-- BOOTSTRAP LINKS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+
+    <!-- MY JS LINKS -->
+    <script src="../js/calculadora.js"></script>
+
+</body>
+</html>
