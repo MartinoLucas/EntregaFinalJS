@@ -40,7 +40,7 @@ btnIngresar.addEventListener("click", (e)=>{
     userFound(login(usuariosLS))
     .then((response)=>{
         divMsgNotFound.innerHTML=`${response}`
-        window.location.href="../pages/principal.html";
+        window.location.href="./pages/principal.html";
     })
     .catch((error)=>{
         divMsgNotFound.innerHTML=`${error}`
