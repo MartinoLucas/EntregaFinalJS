@@ -32,6 +32,19 @@ function limpiarCampos(){
 
 // Listener
 btnIngresar.addEventListener("click", (e)=>{
-    login(usuariosLS);
+    const userFound = (res) => {
+        return new Promise((resolve, reject) =>{
+            res ? resolve("Usuario encontrado") : reject("Usuario no encontrado")
+        })
+    }
+    userFound(login(usuariosLS))
+    .then((response)=>{
+        divMsgNotFound.innerHTML=`${response}`
+        window.location.href="../pages/principal.html";
+    })
+    .catch((error)=>{
+        divMsgNotFound.innerHTML=`${error}`
+    });
+
     limpiarCampos();
 });

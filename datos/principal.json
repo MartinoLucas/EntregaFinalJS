@@ -1,0 +1,6 @@
+[
+    {"alt": "Cuadro de Gastos", "imgSrc": "../imgs/cuadrodegastos.png", "description": "El <b>Cuadro de Gastos</b> permite haer un conteo de todos los gastos y sus tipos, pudiendo controlar el total de los mismos. Esto sirve para tener el detalle de todos nuestros gastos.", "url":"../pages/cuadroGastos.html"},
+    {"alt": "Calculadora de Precios", "imgSrc": "../imgs/calculadora.png", "description": "La <b>Calculadora de Precios</b> le permite a los emprendedores poner el precio adecuado a sus productos, generando ganancias y no perdidas, como es común entre nuevos emprendedores.", "url":"../pages/calculadora.html"},
+    {"alt": "Ficha de Stock", "imgSrc": "../imgs/fichadestock.jpg", "description": "La <b>Ficha de Stock</b> permite a los emprendedores y grandes empresa llevar un registro de su mercadería. La cantidad, el precio de compra y el precio de venta son algunas de sus funcionalidades.", "url":"../pages/stock.html"}
+]
+

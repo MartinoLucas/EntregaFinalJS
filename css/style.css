@@ -58,3 +58,6 @@ footer{
     margin: 70px;
     color: #246a73;
 }
+.bgGrey{
+    background: rgba(185, 185, 185, 0.5);
+}

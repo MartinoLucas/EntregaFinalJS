@@ -11,7 +11,7 @@
 
     <!-- MY LINKS -->
     <link rel="stylesheet" href="../css/style.css">
-    <title>Cuadro de Gastos | Sistema de Información Contable</title>
+    <title>Inicio | CuenCo</title>
 </head>
 <body>
 
@@ -37,11 +37,11 @@
                     <a class="nav-link" href="./cuadroGastos.html">Cuadro de Gastos</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">PROXIMAMENTE</a>
+                    <a class="nav-link" href="./calculadora.html">Calculadora de Precios</a>
                   </li>
-                  <!-- <li class="nav-item">
-                    <a class="nav-link disable" href="#">Ficha de Stock</a>
-                  </li> -->
+                  <li class="nav-item">
+                    <a class="nav-link disable" href="./stock.html">Ficha de Stock</a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -53,31 +53,8 @@
       <div class="m-3 text-center border-bottom">
         <h1>Conocé nuestros servicios:</h1>
       </div>
-      <div class="d-flex justify-content-around m-5">
-        <div class="card m-2" style="width: 18rem;">
-          <img src="../imgs/calculadora.png" class="card-img-top" alt="cuadro de gastos">
-          <div class="card-body">
-            <h5 class="card-title">Calculadora de Precios</h5>
-            <p class="card-text">La <b>Calculadora de Precios</b> le permite a los emprendedores poner el precio adecuado a sus productos, generando ganancias y no perdidas, como es común entre nuevos emprendedores.</p>
-            <a href="../pages/calculadora.html" class="btn btn-primary">PROXIMAMENTE</a>
-          </div>
-        </div>
-        <div class="card m-2" style="width: 18rem;">
-          <img src="../imgs/cuadrodegastos.png" class="card-img-top" alt="calculadora de precios">
-          <div class="card-body">
-            <h5 class="card-title">Cuadro de Gastos</h5>
-            <p class="card-text">El <b>Cuadro de Gastos</b> permite haer un conteo de todos los gastos y sus tipos, pudiendo controlar el total de los mismos. Esto sirve para tener el detalle de todos nuestros gastos.</p>
-            <a href="../pages/cuadroGastos.html" class="btn btn-primary">Empezar</a>
-          </div>
-        </div>
-        <div class="card m-2" style="width: 18rem;">
-          <img src="../imgs/Proximamente.png" class="card-img-top" alt="proximamente">
-          <div class="card-body">
-            <h5 class="card-title">Próximamente</h5>
-            <p class="card-text">Próximamente podrás acceder a una nueva funcionalidad...</p>
-            <a href="#" class="btn btn-primary">PROXIMAMENTE</a>
-          </div>
-        </div>
+      <div class="d-flex justify-content-around m-5" id="cardsContainer">
+        <!-- Informacion extraida de .json -->
       </div>
 
     </main>
@@ -101,5 +78,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
 
     <!-- MY JS LINKS -->
+    <script src="../js/principal.js"></script>
 </body>
 </html>

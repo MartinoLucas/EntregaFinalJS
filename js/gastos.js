@@ -25,12 +25,6 @@ function guardarLS(arr){
         localStorage.setItem("gastos", JSON.stringify(arr));
 };
 
-function errorMsgHTML(){
-    if(inputNombre.value == "" && tipoDato.value == "" && importe.value == ""){
-        divMsg.innerHTML="¡Todos los campos deben completarse!";
-    };
-};
-
 function recuperarLS(key){
     return JSON.parse(localStorage.getItem(key));
 };
@@ -38,13 +32,13 @@ function recuperarLS(key){
 function limpiarCampos(){
     inputNombre.value = "";
     tipoDato.value = "";
-    importe.value = ""
+    importe.value = "";
 };
 
 function cuadroHTML(arr){
     tableBody.innerHTML = "";
 
-     let html = "";
+    let html = "";
      for (const item of arr) {
         html = `<tr>
                  <td>${item.nombre}</td>
@@ -85,13 +79,20 @@ cuadroHTML(gastos);
 btnAgregar.addEventListener("click", (e)=>{
     e.preventDefault();
 
-    const newGasto = new Gasto(inputNombre.value, tipoDato.value, importe.value)
 
-    cargarGasto(newGasto);
-    errorMsgHTML();
-    guardarLS(gastos);
-    cuadroHTML(gastos);
-    limpiarCampos();
+    if(inputNombre.value == "" || tipoDato.value == "" || importe.value == ""){
+        msgErrorGst.innerHTML="¡Todos los campos deben completarse!";
+    }else{
+        const newGasto = new Gasto(inputNombre.value, tipoDato.value, importe.value)
+
+        cargarGasto(newGasto);
+        guardarLS(gastos);
+        cuadroHTML(gastos);
+        limpiarCampos();
+        msgErrorGst.innerHTML="";
+    };
+
+    
 });
 
 btnTotal.addEventListener("click", (e)=>{
@@ -105,3 +106,23 @@ btnTotal.addEventListener("click", (e)=>{
     
     HTMLTotal(gastosImporte);
 })
+
+//Fetch
+const cardsContainer = document.querySelector("#cardsContainer");
+
+fetch("../datos/gastos.json")
+    .then( (res) => res.json())
+    .then((datos)=>{
+        datos.forEach(dato => {
+            const div = document.createElement("div");
+            div.innerHTML=`
+            <div class="card m-4" style="width: 18rem;">
+                <img src="${dato.imgSrc}" class="card-img-top" alt="${dato.alt}">
+                <div class="card-body">
+                    <p class="card-text">${dato.description}</p>
+                    <p class="card-text">${dato.subDescription}</p>
+                </div>
+            </div>`
+            cardsContainer.append(div)
+        });
+    });

@@ -69,6 +69,15 @@ btnRegister.addEventListener("click", () => {
     errorHTML();
     creadoHTML();
     guardarLS(usuarios);
+    if(user.value != "" && email.value != "" && pass.value != ""){
+        Swal.fire({
+            icon: 'success',
+            title: '¡Listo!',
+            text: 'Usuario creado con éxito',
+            footer: '<a href="../index.html">Accedé desde aquí</a>'
+          });
+          divMsg.innerHTML="";
+    };
     limpiarCampos();
 
 });
